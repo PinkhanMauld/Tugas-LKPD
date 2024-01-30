@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //LKPD 3
+        //nomor 1
+        let kg = 3
+        let hargajeruk = 5000
+        let diskon = 0.05
+        let bayar 
+        let harga = kg * hargajeruk
+
+            diskon = 0.05 * harga
+            bayar = harga - diskon
+
+            console.log ('Harga Awal Anda', harga)
+            console.log ('Anda mendapatkan diskon', diskon)
+            console.log ('Harga yang harus anda bayar', bayar)
+        
+
+        //nomor2
+        let bilangan = 2713
+        let satuan, puluhan, ratusan, ribuan
+
+        if (bilangan) {
+            satuan = bilangan % 10
+            puluhan = bilangan % 100/10
+            ratusan = bilangan % 1000/100
+            ribuan = bilangan % 10000/1000
+            console.log ('Satuannya', satuan) 
+            console.log ('Puluhannya', puluhan)
+            console.log ('ratusannya', ratusan)
+            console.log ('ribuannya', ribuan)
+        }
+
+        //nomor 3
+        let suhu = prompt('Masukan suhu')
+
+        if (suhu >= 300) {
+            console.log ('Cuaca menandakan panas')
+        }
+        else if (suhu <= 250) {
+            console.log ('Cuaca menandakan dingin')
+        }
+        else if (suhu > 250 && suhu < 300) {
+            console.log ('Cuaca menandakan normal')
+        }
+    </script>
+</body>
+</html>

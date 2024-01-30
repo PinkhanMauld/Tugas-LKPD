@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lkpd 2</title>
+</head>
+<body>
+    
+    <script>
+        
+        //GAJI KARYAWAN
+        let namakaryawan = 'Molid' ;
+        let gajipokok = 5000000 ;
+        let tunjangan = 20/100*gajipokok ;
+        let pajak = 15/100*gajipokok ;
+        let gajibersih = gajipokok + tunjangan + pajak;
+
+        console.log ('Nama karyawan', namakaryawan)
+        console.log ('Gaji pokok', gajipokok)
+        console.log ('Tunjangan', tunjangan)
+        console.log ('Pajak', pajak)
+
+
+
+        //JAM
+        let m = 1;
+        let menitt = 30;
+        let detikk = 40;
+        let totall = jam*3600 + menit*60 + detik;
+
+        console.log (totall, 'detik');
+
+
+        //detik
+        function tambahSatuDetik(waktu) {
+        let [jam, menit, detik] = waktu.split(":")
+
+        jam = Number(jam)
+        menit = Number(menit)
+        detik = Number(detik)
+
+        detik++
+
+        if (detik > 59) {
+        menit++;
+        detik = 0
+        }
+
+        if (menit > 59) {
+        jam++;
+        menit = 0
+        }
+
+        if (jam > 23) {
+        jam = 0
+        }
+
+        jam = jam.toString().padStart(2, "0")
+        menit = menit.toString().padStart(2, "0")
+        detik = detik.toString().padStart(2, "0")
+        let waktuBaru = [jam, menit, detik].join(":")
+        return waktuBaru; }
+
+        console.log(tambahSatuDetik("12:34:56"))
+        console.log(tambahSatuDetik("23:59:59"))
+        console.log(tambahSatuDetik("01:02:03"))                    
+
+        
+
+       
+        
+
+    </script>
+</body>
+</html>
